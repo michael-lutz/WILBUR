@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,20 +52,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Michael Lutz</a><sup>*1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Arth Bohra</a><sup>*1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Manvel Saroyan</a><sup>2</sup>
+                  </span>
+                  <br>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Artem Harutyunyan</a><sup>2</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Giovanni Campagna</a><sup>2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">UC Berkeley<sup>1</sup>, Bardeen<sup>2</sup></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -122,23 +129,53 @@
   </div>
 </section>
 
-
 <!-- Teaser video-->
-<section class="hero teaser">
+<section class="videos-array">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="columns">
+      <!-- Video 1 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Video 2 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Video 3 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns">
+      <!-- Video 4 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Video 5 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Video 6 -->
+      <div class="column">
+        <video autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +185,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            In the realm of web agent research, achieving both generalization and accuracy remains a challenging problem. Due to high variance in website structure, existing approaches often fail. Moreover, existing fine-tuning and in-context learning techniques fail to generalize across multiple websites. We introduce WILBUR, an approach that uses a differentiable ranking model and a novel instruction synthesis technique to optimally populate a black-box large language model’s prompt with task demonstrations from previous runs. To maximize end-to-end success rates, we also propose an intelligent backtracking mechanism that learns and recovers from its mistakes. Finally, we show that our ranking model can be trained on data from a generative auto-curriculum which samples representative goals from an LLM, runs the agent, and automatically evaluates it, with no manual annotation. WILBUR achieves state-of-the-art results on the WebVoyager benchmark, beating text-only models by 8% overall, and up to 36% on certain websites. On the same benchmark, WILBUR is within 5% of a strong multi-modal model despite only receiving textual inputs, and further analysis reveals a substantial number of failures are due to engineering challenges of operating the web.
           </p>
         </div>
       </div>
@@ -157,129 +194,83 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Methodology -->
+<section class="section hero" style="padding-bottom: 0;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Architecture</h2>
+    <div class="content has-text-justified " style="margin-bottom: auto;">
+      <p>Given the goal and the current state of the page, Wilbur repeatedly executes actions until the task is predicted to have finished or until backtracking is necessary.</p>
+      <p>At each step of the execution, Wilbur makes use of the following sub-modules:</p>
+      <ol>
+          <li>The <strong>demonstration retriever</strong> queries a demonstration bank of full-length trajectories and finds the relevant ones; individual action demonstrations are also queried. The retriever obtains both positive (successful) and negative (unsuccessful) demonstrations.</li>
+          <li>The <strong>knowledge synthesizer</strong> summarizes the demonstrations into a description of learnings; demonstrations are summarized separately.</li>
+          <li>The <strong>actor</strong> references demonstrations and learnings to predict an action, given the current state, next step plan from previous step, and feedback if returning from a backtrack.</li>
+          <li>The <strong>executor</strong> performs the action on the website and obtains the new observable state as well as execution feedback.</li>
+          <li>The <strong>reflection</strong> module compares the old and new states before determining whether to backtrack, continue, or finish; it updates feedback for backtracking or plans the next step if continuing.</li>
+          <li>At the end of an execution, the <strong>answer module</strong> produces the textual response required by the goal using the final observable state, and agent's trajectory.</li>
+      </ol>
+      <div class="has-text-centered">
+        <img src="./static/images/wilbur_methodology.png" alt="System Architecture" 
+          style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      
+      <!-- demonstration retrieval + algorithm-->
+      <div class="content has-text-justified">
+        <p>
+          TODO: include figure here for demonstration flow w/ example demonstrations
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
+      
+      <table width="100%">
+        <tr>
+          <!-- Text Content -->
+          <td>
+            <h2>WILBUR is a graph traverser</h2>
+            <p>After an action is taken, WILBUR checks if the executed action achieved its intended step and is making progress toward the goal.</p>
+            <p><code>v, φ, p′ = Reflect(o, o′, a, p, g)</code></p>
+            <p>where <code>v</code> is a ternary verdict:</p>
+            <ul>
+              <li><strong>FINISH:</strong> the current goal was completed successfully</li>
+              <li><strong>CONTINUE:</strong> proceed by completing planned step <code>p′</code> next</li>
+              <li><strong>BACKTRACK:</strong> backtrack and utilize feedback <code>φ′</code></li>
+            </ul>
+            <p>The reflector uses both a rule-based comparison algorithm that checks for state changes, and an LLM to compute the verdict.
+            <p>If the agent backtracks, it returns to the most recent observation that is safe to return to. Because the backend is real and not simulated, not all state changes can be reverted. In the current implementation, WILBUR returns to the most recent state that corresponded to a navigation (change in page URL). The new state is applied by that refreshing or navigating to that URL, which resets the DOM on the page.</p>
+          </td>
+          <!-- Image Content -->
+          <td width="40%">
+            <img src="./static/images/graph_traversal.svg" alt="Backtracking" style="width: 100%;">
+          </td>
+        </tr>
+      </table>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+      <!-- demonstration retrieval + algorithm-->
+      <div class="content has-text-justified">
+        <p>
+          TODO: add to autocurriculum
+        </p>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End methodology -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- Start Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Results</h2>
+    <img src="./static/images/results_table.png" alt="Results" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+    <p>Include results summary</p>
+  </div>
+</section>
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
+  </div>
 </section>
 <!--End BibTex citation -->
 
