@@ -135,45 +135,62 @@
     <div class="columns">
       <!-- Video 1 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid1">
+          <source src="static/videos/wilbur_apple.mp4" type="video/mp4">
         </video>
       </div>
       <!-- Video 2 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid2">
+          <source src="static/videos/wilbur_bbc.mp4" type="video/mp4">
         </video>
       </div>
       <!-- Video 3 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid3">
+          <source src="static/videos/wilbur_cambridge.mp4" type="video/mp4">
         </video>
       </div>
     </div>
     <div class="columns">
       <!-- Video 4 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid4">
+          <source src="static/videos/wilbur_search.mp4" type="video/mp4">
         </video>
       </div>
       <!-- Video 5 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid5">
+          <source src="static/videos/wilbur_wolfram.mp4" type="video/mp4">
         </video>
       </div>
       <!-- Video 6 -->
       <div class="column">
-        <video autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <video autoplay muted loop height="100%" id="vid6">
+          <source src="static/videos/wilbur_bbc.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  var vid1 = document.getElementById("vid1");
+  vid1.playbackRate = 3;
+  var vid2 = document.getElementById("vid2");
+  vid2.playbackRate = 4;
+  var vid3 = document.getElementById("vid3");
+  vid3.playbackRate = 1;
+  var vid4 = document.getElementById("vid4");
+  vid4.playbackRate = 1;
+  var vid5 = document.getElementById("vid5");
+  vid5.playbackRate = 4;
+  var vid6 = document.getElementById("vid6");
+  vid6.playbackRate = 4;
+</script>
+
+
 <!-- End teaser video -->
 
 
