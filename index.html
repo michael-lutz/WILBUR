@@ -314,7 +314,7 @@
           </ol>
           <div class="has-text-centered">
             <img
-              src="./static/images/wilbur_methodology.png"
+              src="./static/images/methodology.gif"
               alt="System Architecture"
               style="
                 display: block;
@@ -327,17 +327,20 @@
 
           <!-- demonstration retrieval + algorithm-->
           <div class="content has-text-justified">
+            <h1>Action Demonstration Ranking</h1>
             <p>
-              TODO: include figure here for demonstration flow w/ example
-              demonstrations
+              In order to have action demonstrations scale across multiple websites and types of pages (e.g. search pages, documentation, etc.), the quality of action demonstrations is important. To that end, a simple cosine similarity is not sufficient to determine whether a demonstration will actively help the actor. While a demonstration might be similar, there may exist slight differences in respective DOMs that lead the actor astray.
+            </p>
+            <p>
+              The ranking model is an MLP that encodes the embeddings of the demonstrations (observation, plan, action) as well as the current observation and plan, and it is trained to predict whether a demonstration leads to a successful execution or not, as a 0-1 score. After computing the score of each demonstrations and normalizing with softmax, we then sample successful executions to include in the actor's context.
             </p>
           </div>
 
+          <h2>WILBUR is a graph traverser</h2>
           <table width="100%">
             <tr>
               <!-- Text Content -->
               <td>
-                <h2>WILBUR is a graph traverser</h2>
                 <p>
                   After an action is taken, WILBUR checks if the executed action
                   achieved its intended step and is making progress toward the
@@ -390,14 +393,14 @@
             <h2>WILBUR learns from an autocurriculum</h2>
             <p>In order to populate WILBUR's demonstration banks and <b>train our knowledge model</b>, we build a multi-step auto-curriculum to <b>collect reference trajectories</b>.</p>
             <ol>
-              <li>An auto-curriculum is run on a batch of websites and record predicted end-to-end success using an execution evaluation LM.</li>
+              <li>An auto-curriculum is run on a batch of websites and record predicted end-to-end success using an execution evaluation language model.</li>
               <li>A more challenging goal-generation process is run <b>conditioned on initial goals and utilizing task and goal demonstrations</b> from trajectories recorded in the first step.</li>
               <li>We train our knowledge model to <b>predict success likelihood</b> of actions in the follow-up run which reference demonstrations in the first run.</li>
             </ol>
             <p>
               Our autocurriculum is <b>generated through LLM generated goals</b>, where given a set of websites, we query a model to generate realistic use-cases.
-              To actually evaluate the agent's execution on a goal from the auto-curriculum, we model self-evaluation rˆ ∈ [0, 1] as a function of the agent’s execution trajectory τ and returned text answer.
-              Essentially, r^ is the LLM's evaluation of success of the agent's execution trajectory with regards to the goal's requirements. 
+              To actually evaluate the agent's execution on a goal from the auto-curriculum, we model self-evaluation <code>r ∈ [0, 1]</code> as a function of the agent’s execution trajectory τ and returned text answer.
+              Essentially, <code>r</code> is the LLM's evaluation of success of the agent's execution trajectory with regards to the goal's requirements. 
             </p>
             <p>
               <b>Using the Autocurriculum to Train the Knowledge Model: </b>The first run of auto-curriculum generates demonstrations queried during the second run of the auto-curriculum. As such, the follow-up run
@@ -427,9 +430,10 @@
         <div class="content has-text-justified" style="margin-bottom: auto">
           <p></p>
           <p>
-            On this benchmark, WILBUR outperforms the state-of-the-art text-only
+            On the WebVoyager benchmark using the experimental setup outlined in the paper,
+            WILBUR outperforms the state-of-the-art text-only
             model by <b>8%</b>. Specifically, we observe that WILBUR <b>outperforms</b> the
-            SoTa model on most websites except Github and the Google websites.
+            SOTA model on most websites except Github and the Google websites.
           </p>
           <p>
             It improves substantially on the very hard Booking.com case, from
@@ -474,26 +478,12 @@
           <div class="column is-8">
             <div class="content">
               <p>
-                This page was built using the
+                This page was built using the following
                 <a
                   href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                   target="_blank"
-                  >Academic Project Page Template</a
+                  >website template</a
                 >
-                which was adopted from the <a
-                  href="https://nerfies.github.io"
-                  target="_blank"
-                  >Nerfies</a
-                > project page. You are free to borrow the of this website, we
-                just ask that you link back to this page in the footer. <br />
-                This website is licensed under a
-                <a
-                  rel="license"
-                  href="http://creativecommons.org/licenses/by-sa/4.0/"
-                  target="_blank"
-                  >Creative Commons Attribution-ShareAlike 4.0 International
-                  License</a
-                >.
               </p>
             </div>
           </div>
