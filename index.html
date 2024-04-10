@@ -372,6 +372,7 @@
                   URL). The new state is applied by that refreshing or
                   navigating to that URL, which resets the DOM on the page.
                 </p>
+                
               </td>
               <!-- Image Content -->
               <td width="40%">
@@ -386,7 +387,23 @@
 
           <!-- demonstration retrieval + algorithm-->
           <div class="content has-text-justified">
-            <p>TODO: add to autocurriculum</p>
+            <h2>WILBUR learns from an autocurriculum</h2>
+            <p>In order to populate WILBUR's demonstration banks and <b>train our knowledge model</b>, we build a multi-step auto-curriculum to <b>collect reference trajectories</b>.</p>
+            <ol>
+              <li>An auto-curriculum is run on a batch of websites and record predicted end-to-end success using an execution evaluation LM.</li>
+              <li>A more challenging goal-generation process is run <b>conditioned on initial goals and utilizing task and goal demonstrations</b> from trajectories recorded in the first step.</li>
+              <li>We train our knowledge model to <b>predict success likelihood</b> of actions in the follow-up run which reference demonstrations in the first run.</li>
+            </ol>
+            <p>
+              Our autocurriculum is <b>generated through LLM generated goals</b>, where given a set of websites, we query a model to generate realistic use-cases.
+              To actually evaluate the agent's execution on a goal from the auto-curriculum, we model self-evaluation rˆ ∈ [0, 1] as a function of the agent’s execution trajectory τ and returned text answer.
+              Essentially, r^ is the LLM's evaluation of success of the agent's execution trajectory with regards to the goal's requirements. 
+            </p>
+            <p>
+              <b>Using the Autocurriculum to Train the Knowledge Model: </b>The first run of auto-curriculum generates demonstrations queried during the second run of the auto-curriculum. As such, the follow-up run
+              generates training data for the knowledge model. We train the knowledge model to <b>predict
+              action success</b> as estimated in the reflection step, using binary cross-entropy loss.
+            </p>
           </div>
         </div>
       </div>
