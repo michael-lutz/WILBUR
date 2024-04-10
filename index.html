@@ -1,98 +1,136 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG" />
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta
+      property="og:description"
+      content="SOCIAL MEDIA DESCRIPTION TAG TAG"
+    />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+    <meta
+      name="twitter:description"
+      content="TWITTER BANNER DESCRIPTION META TAG"
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta
+      name="twitter:image"
+      content="static/images/your_twitter_banner_image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents
+    </title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
 
-  <title>WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Michael Lutz</a><sup>*1</sup>,</span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                WILBUR: Adaptive In-Context Learning for Robust and Accurate Web
+                Agents
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Arth Bohra</a><sup>*1</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Manvel Saroyan</a><sup>2</sup>
-                  </span>
-                  <br>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Artem Harutyunyan</a><sup>2</sup>
-                  </span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Giovanni Campagna</a><sup>2</sup>
-                  </span>
-                  </div>
+                  <a href="https://twitter.com/Michael_J_Lutz" target="_blank"
+                    >Michael Lutz</a
+                  ><sup>*1</sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://twitter.com/arth_bohra" target="_blank"
+                    >Arth Bohra</a
+                  ><sup>*1</sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://twitter.com/saroyanm" target="_blank"
+                    >Manvel Saroyan</a
+                  ><sup>2</sup>
+                </span>
+                <br />
+                <span class="author-block">
+                  <a href="https://twitter.com/hartem" target="_blank"
+                    >Artem Harutyunyan</a
+                  ><sup>2</sup>
+                </span>
+                <span class="author-block">
+                  <a href="https://twitter.com/gcampax" target="_blank"
+                    >Giovanni Campagna</a
+                  ><sup>2</sup>
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">UC Berkeley<sup>1</sup>, Bardeen<sup>2</sup></span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  >UC Berkeley<sup>1</sup>, Bardeen<sup>2</sup></span
+                >
+                <span class="eql-cntrb"
+                  ><small
+                    ><br /><sup>*</sup>Indicates Equal Contribution</small
+                  ></span
+                >
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2404.05902" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2404.05902"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
 
-                    <!-- Bardeen link -->
-                    <span class="link-block">
-                      <a href="https://www.bardeen.ai/" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
+                  <!-- Bardeen link -->
+                  <span class="link-block">
+                    <a
+                      href="https://www.bardeen.ai/"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -100,211 +138,356 @@
                     </a>
                   </span>
 
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2404.05902" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2404.05902"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Teaser video-->
-<section class="videos-array">
-  <div class="container is-max-desktop">
-    <div class="columns">
-      <!-- Video 1 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid1">
-          <source src="static/videos/wilbur_apple.mp4" type="video/mp4">
-        </video>
+    <!-- Teaser video-->
+    <section class="videos-array">
+      <div class="container is-max-desktop">
+        <div class="columns">
+          <!-- Video 1 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid1">
+              <source src="static/videos/wilbur_apple.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- Video 2 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid2">
+              <source src="static/videos/wilbur_bbc.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- Video 3 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid3">
+              <source
+                src="static/videos/wilbur_cambridge.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div class="columns">
+          <!-- Video 4 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid4">
+              <source src="static/videos/wilbur_search.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- Video 5 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid5">
+              <source src="static/videos/wilbur_wolfram.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- Video 6 -->
+          <div class="column">
+            <video autoplay muted loop height="100%" id="vid6">
+              <source src="static/videos/wilbur_espn.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
-      <!-- Video 2 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid2">
-          <source src="static/videos/wilbur_bbc.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid3">
-          <source src="static/videos/wilbur_cambridge.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="columns">
-      <!-- Video 4 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid4">
-          <source src="static/videos/wilbur_search.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- Video 5 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid5">
-          <source src="static/videos/wilbur_wolfram.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- Video 6 -->
-      <div class="column">
-        <video autoplay muted loop height="100%" id="vid6">
-          <source src="static/videos/wilbur_espn.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<script>
-  var vid1 = document.getElementById("vid1");
-  vid1.playbackRate = 3;
-  var vid2 = document.getElementById("vid2");
-  vid2.playbackRate = 4;
-  var vid3 = document.getElementById("vid3");
-  vid3.playbackRate = 1;
-  var vid4 = document.getElementById("vid4");
-  vid4.playbackRate = 1;
-  var vid5 = document.getElementById("vid5");
-  vid5.playbackRate = 4;
-  var vid6 = document.getElementById("vid6");
-  vid6.playbackRate = 4;
-</script>
+    <script>
+      var vid1 = document.getElementById("vid1");
+      vid1.playbackRate = 3;
+      var vid2 = document.getElementById("vid2");
+      vid2.playbackRate = 4;
+      var vid3 = document.getElementById("vid3");
+      vid3.playbackRate = 1;
+      var vid4 = document.getElementById("vid4");
+      vid4.playbackRate = 1;
+      var vid5 = document.getElementById("vid5");
+      vid5.playbackRate = 4;
+      var vid6 = document.getElementById("vid6");
+      vid6.playbackRate = 4;
+    </script>
 
+    <!-- End teaser video -->
 
-<!-- End teaser video -->
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In the realm of web agent research, achieving both
+                generalization and accuracy remains a challenging problem. Due
+                to high variance in website structure, existing approaches often
+                fail. Moreover, existing fine-tuning and in-context learning
+                techniques fail to generalize across multiple websites. We
+                introduce WILBUR, an approach that uses a differentiable ranking
+                model and a novel instruction synthesis technique to optimally
+                populate a black-box large language model’s prompt with task
+                demonstrations from previous runs. To maximize end-to-end
+                success rates, we also propose an intelligent backtracking
+                mechanism that learns and recovers from its mistakes. Finally,
+                we show that our ranking model can be trained on data from a
+                generative auto-curriculum which samples representative goals
+                from an LLM, runs the agent, and automatically evaluates it,
+                with no manual annotation. WILBUR achieves state-of-the-art
+                results on the WebVoyager benchmark, beating text-only models by
+                8% overall, and up to 36% on certain websites. On the same
+                benchmark, WILBUR is within 5% of a strong multi-modal model
+                despite only receiving textual inputs, and further analysis
+                reveals a substantial number of failures are due to engineering
+                challenges of operating the web.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
 
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+    <!-- Methodology -->
+    <section class="section hero" style="padding-bottom: 0">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3" style="text-align: center">Architecture</h2>
+        <div class="content has-text-justified" style="margin-bottom: auto">
           <p>
-            In the realm of web agent research, achieving both generalization and accuracy remains a challenging problem. Due to high variance in website structure, existing approaches often fail. Moreover, existing fine-tuning and in-context learning techniques fail to generalize across multiple websites. We introduce WILBUR, an approach that uses a differentiable ranking model and a novel instruction synthesis technique to optimally populate a black-box large language model’s prompt with task demonstrations from previous runs. To maximize end-to-end success rates, we also propose an intelligent backtracking mechanism that learns and recovers from its mistakes. Finally, we show that our ranking model can be trained on data from a generative auto-curriculum which samples representative goals from an LLM, runs the agent, and automatically evaluates it, with no manual annotation. WILBUR achieves state-of-the-art results on the WebVoyager benchmark, beating text-only models by 8% overall, and up to 36% on certain websites. On the same benchmark, WILBUR is within 5% of a strong multi-modal model despite only receiving textual inputs, and further analysis reveals a substantial number of failures are due to engineering challenges of operating the web.
+            Given the goal and the current state of the page, Wilbur repeatedly
+            executes actions until the task is predicted to have finished or
+            until backtracking is necessary.
+          </p>
+          <p>
+            At each step of the execution, Wilbur makes use of the following
+            sub-modules:
+          </p>
+          <ol>
+            <li>
+              The <strong>demonstration retriever</strong> queries a
+              demonstration bank of full-length trajectories and finds the
+              relevant ones; individual action demonstrations are also queried.
+              The retriever obtains both positive (successful) and negative
+              (unsuccessful) demonstrations.
+            </li>
+            <li>
+              The <strong>knowledge synthesizer</strong> summarizes the
+              demonstrations into a description of learnings; demonstrations are
+              summarized separately.
+            </li>
+            <li>
+              The <strong>actor</strong> references demonstrations and learnings
+              to predict an action, given the current state, next step plan from
+              previous step, and feedback if returning from a backtrack.
+            </li>
+            <li>
+              The <strong>executor</strong> performs the action on the website
+              and obtains the new observable state as well as execution
+              feedback.
+            </li>
+            <li>
+              The <strong>reflection</strong> module compares the old and new
+              states before determining whether to backtrack, continue, or
+              finish; it updates feedback for backtracking or plans the next
+              step if continuing.
+            </li>
+            <li>
+              At the end of an execution, the
+              <strong>answer module</strong> produces the textual response
+              required by the goal using the final observable state, and agent's
+              trajectory.
+            </li>
+          </ol>
+          <div class="has-text-centered">
+            <img
+              src="./static/images/wilbur_methodology.png"
+              alt="System Architecture"
+              style="
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+              "
+            />
+          </div>
+
+          <!-- demonstration retrieval + algorithm-->
+          <div class="content has-text-justified">
+            <p>
+              TODO: include figure here for demonstration flow w/ example
+              demonstrations
+            </p>
+          </div>
+
+          <table width="100%">
+            <tr>
+              <!-- Text Content -->
+              <td>
+                <h2>WILBUR is a graph traverser</h2>
+                <p>
+                  After an action is taken, WILBUR checks if the executed action
+                  achieved its intended step and is making progress toward the
+                  goal.
+                </p>
+                <p><code>v, φ, p′ = Reflect(o, o′, a, p, g)</code></p>
+                <p>where <code>v</code> is a ternary verdict:</p>
+                <ul>
+                  <li>
+                    <strong>FINISH:</strong> the current goal was completed
+                    successfully
+                  </li>
+                  <li>
+                    <strong>CONTINUE:</strong> proceed by completing planned
+                    step <code>p′</code> next
+                  </li>
+                  <li>
+                    <strong>BACKTRACK:</strong> backtrack and utilize feedback
+                    <code>φ′</code>
+                  </li>
+                </ul>
+                <p>
+                  The reflector uses both a rule-based comparison algorithm that
+                  checks for state changes, and an LLM to compute the verdict.
+                </p>
+                <p>
+                  If the agent backtracks, it returns to the most recent
+                  observation that is safe to return to. Because the backend is
+                  real and not simulated, not all state changes can be reverted.
+                  In the current implementation, WILBUR returns to the most
+                  recent state that corresponded to a navigation (change in page
+                  URL). The new state is applied by that refreshing or
+                  navigating to that URL, which resets the DOM on the page.
+                </p>
+              </td>
+              <!-- Image Content -->
+              <td width="40%">
+                <img
+                  src="./static/images/graph_traversal.svg"
+                  alt="Backtracking"
+                  style="width: 100%"
+                />
+              </td>
+            </tr>
+          </table>
+
+          <!-- demonstration retrieval + algorithm-->
+          <div class="content has-text-justified">
+            <p>TODO: add to autocurriculum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End methodology -->
+
+    <!-- Start Results -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3" style="text-align: center">Results</h2>
+        <img
+          src="./static/images/results_table.png"
+          alt="Results"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+          "
+        />
+        <div class="content has-text-justified" style="margin-bottom: auto">
+          <p></p>
+          <p>
+            On this benchmark, WILBUR outperforms the state-of-the-art text-only
+            model by <b>8%</b>. Specifically, we observe that WILBUR <b>outperforms</b> the
+            SoTa model on most websites except Github and the Google websites.
+          </p>
+          <p>
+            It improves substantially on the very hard Booking.com case, from
+            around <b>2.4% to 39%</b>. WILBUR is also within 5% of the multimodal
+            model, which has access to screenshots during execution, and
+            outperforms it on Allrecipes, ArXiv, Booking.com, ESPN, Cambridge
+            Dictionary, BBC News, and Wolfram.
+          </p>
+          <p>
+            Comparing against the ablation baselines, we observe that the naive
+            <b>zero-shot baseline is significantly worse than the state of the art</b>,
+            but adding backtracking is enough to come close to the
+            state-of-the-art result. Adding task demonstrations improves to 50%,
+            showing the value of recalling previous experiences from
+            auto-curriculum. Finally, the use of the fine-tuned demonstration
+            retrieval model further improves by 3% overall, highlighting the
+            <b>importance of selecting high-quality task demonstrations</b>.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
-<!-- Methodology -->
-<section class="section hero" style="padding-bottom: 0;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3" style="text-align: center;">Architecture</h2>
-    <div class="content has-text-justified " style="margin-bottom: auto;">
-      <p>Given the goal and the current state of the page, Wilbur repeatedly executes actions until the task is predicted to have finished or until backtracking is necessary.</p>
-      <p>At each step of the execution, Wilbur makes use of the following sub-modules:</p>
-      <ol>
-          <li>The <strong>demonstration retriever</strong> queries a demonstration bank of full-length trajectories and finds the relevant ones; individual action demonstrations are also queried. The retriever obtains both positive (successful) and negative (unsuccessful) demonstrations.</li>
-          <li>The <strong>knowledge synthesizer</strong> summarizes the demonstrations into a description of learnings; demonstrations are summarized separately.</li>
-          <li>The <strong>actor</strong> references demonstrations and learnings to predict an action, given the current state, next step plan from previous step, and feedback if returning from a backtrack.</li>
-          <li>The <strong>executor</strong> performs the action on the website and obtains the new observable state as well as execution feedback.</li>
-          <li>The <strong>reflection</strong> module compares the old and new states before determining whether to backtrack, continue, or finish; it updates feedback for backtracking or plans the next step if continuing.</li>
-          <li>At the end of an execution, the <strong>answer module</strong> produces the textual response required by the goal using the final observable state, and agent's trajectory.</li>
-      </ol>
-      <div class="has-text-centered">
-        <img src="./static/images/wilbur_methodology.png" alt="System Architecture" 
-          style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{lutz2024wilbur,
+  title={WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents}, 
+  author={Michael Lutz and Arth Bohra and Manvel Saroyan and Artem Harutyunyan and Giovanni Campagna},
+  year={2024},
+  eprint={2404.05902},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}</code></pre>
       </div>
-      
-      <!-- demonstration retrieval + algorithm-->
-      <div class="content has-text-justified">
-        <p>
-          TODO: include figure here for demonstration flow w/ example demonstrations
-        </p>
-      </div>
+    </section>
+    <!--End BibTex citation -->
 
-      
-      <table width="100%">
-        <tr>
-          <!-- Text Content -->
-          <td>
-            <h2>WILBUR is a graph traverser</h2>
-            <p>After an action is taken, WILBUR checks if the executed action achieved its intended step and is making progress toward the goal.</p>
-            <p><code>v, φ, p′ = Reflect(o, o′, a, p, g)</code></p>
-            <p>where <code>v</code> is a ternary verdict:</p>
-            <ul>
-              <li><strong>FINISH:</strong> the current goal was completed successfully</li>
-              <li><strong>CONTINUE:</strong> proceed by completing planned step <code>p′</code> next</li>
-              <li><strong>BACKTRACK:</strong> backtrack and utilize feedback <code>φ′</code></li>
-            </ul>
-            <p>The reflector uses both a rule-based comparison algorithm that checks for state changes, and an LLM to compute the verdict.
-            <p>If the agent backtracks, it returns to the most recent observation that is safe to return to. Because the backend is real and not simulated, not all state changes can be reverted. In the current implementation, WILBUR returns to the most recent state that corresponded to a navigation (change in page URL). The new state is applied by that refreshing or navigating to that URL, which resets the DOM on the page.</p>
-          </td>
-          <!-- Image Content -->
-          <td width="40%">
-            <img src="./static/images/graph_traversal.svg" alt="Backtracking" style="width: 100%;">
-          </td>
-        </tr>
-      </table>
-
-      <!-- demonstration retrieval + algorithm-->
-      <div class="content has-text-justified">
-        <p>
-          TODO: add to autocurriculum
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End methodology -->
-
-<!-- Start Results -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3" style="text-align: center;">Results</h2>
-    <img src="./static/images/results_table.png" alt="Results" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
-    <p>Include results summary</p>
-  </div>
-</section>
-
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>BibTex Code Here</code></pre>
-  </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. You are free to borrow the of this website, we
+                just ask that you link back to this page in the footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
   </body>
-  </html>
+</html>
